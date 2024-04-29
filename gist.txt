@@ -1,0 +1,92 @@
+EXERCISE-4
+
+MAIN TASK
+
+1. First, one person in the group should create a public repository using their GitHub account.
+ans :- git repo was created and its SSH id is git@github.com:JhaPrateek/Exercise3.git 
+
+2. This same person should then follow the instructions from GitHub to add a remote, and
+then push their repository. Do not forget the –u flag, as suggested by GitHub!
+
+ans :- created the remote and pushed repo using the commands shown at the repo's first page. we used SSH id to add remote and push
+
+3. All of the other members of the group should then be added as collaborators, so they can
+commit to the repository also.
+
+ans:- all other memebers( Ravi Ranjan, Pranav Kumar Singh, Harini Devi) were added as a collaborators.
+
+4. Next, everyone else in the group should clone the repository from GitHub. Verify that the
+context of the repository is what is expected.
+
+ans :- other members cloned the repo using 
+	git clone <SSH ID>
+	
+5. One of the group members who just cloned should now make a local commit, then push it.
+Everyone should verify that when they pull, that commit is added to their local repository
+(use git log to check for it).
+
+ans:- one of the member(Ravi) created a file and did the commit and pushed it 
+	other members used 
+	git pull
+	to get the updates
+	
+6. Look at each other’s git log output. Notice how the SHA-1 is the same for a given commit
+across every copy of the repository. Why is this important?
+
+ans :- yes it was same for all of us, it is important because we use SHA-1(hash code) to identify which commit are we intrested in and want to modify or delete
+	so for all of the members it should be same to avoid any confusion
+	
+7. Two members of the group should now make a commit locally, and race to push it. To keep
+things simple, be sure to edit different files. What happens to the runner-up ?
+
+ans:- we did it at same time and the one with later got this error while pushing 
+	git push
+To github.com:JhaPrateek/Exercise3.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:JhaPrateek/Exercise3.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+this simply tells us that the main which is on remote is now updated and what he had in his local was not updated so he had to use git pull to get all the updates main had and then only he can procede
+
+
+
+8. The runner-up should now pull. As a group, look at the output of the command.
+Additionally, look at the git log, and notice that there is a merge commit. You may also
+wish to view the DAG in gitk.
+
+ans:- to be able to push the commit, he had to use the command
+	git merge 
+	which brings him to the UI where he can modify and save 
+	after merging 
+	he can push the commit
+explanation :- Avoiding Divergent Branches: If contributors work on the same branch independently and push changes without synchronizing with the remote repository, it can lead to divergent branches. Merging or rebasing before pushing helps keep the branches aligned and prevents divergence, ensuring that everyone is working on the same codebase.
+
+
+9. Repeat the last two steps a couple of times, to practice.
+ans :- we repeatedly did it couple of times and using gitk and git log we examined the results 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stretch Task
+1. Now create a situation where two group members both edit the same line in the same file
+and commit it locally. Race to push.
+ans:- we modified the same file at the same time .
+2. When the runner-up does a pull, they should get a merge conflict.
+ans :-  yes, we ran into this problem 
+3. Look as a group at the file in conflict, and resolve it.
+ans :- we used git merged on the runner's-up system and then pused the commit
+	also we did git pull to update changes
+	and then to resolve the conflict we had to manually do it in the repo by watching the changes
+	
+4. Use the add command to stage the fix, and then use commit to make the merge commit.
+Notice how this procedure is exactly the one you got used to when resolving conflicts in
+branches.
+
+ans:- yes, once conflicts are resolved, we need to stage the resolved changes using the git add command.
+	This tells Git that the conflicts have been resolved, and the changes are ready to be committed.
