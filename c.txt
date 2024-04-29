@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 iam going to edit c.txt file
+=======
+this file made by Pranav. Now Editing this file.
+adding second line
+adding 3rd line to cfile.
+
+
+>>>>>>> refs/remotes/origin/main
