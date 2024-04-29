@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 Hello Java
 Hello python
 C++
+=======
+Hello Java, how are you??
+>>>>>>> 2f1086b48c313354971e8d412e947f189cbea433
